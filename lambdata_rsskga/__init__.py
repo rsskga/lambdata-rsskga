@@ -10,5 +10,11 @@ ZEROS = pd.DataFrame(np.zeros(50))
 
 
 # sample functions
-def increment(x):
+# sample pylint suppression: https://google.github.io/styleguide/pyguide.html
+def increment(x): # pylint: disable=invalid-name
+    """Testing a pylint fix"""
     return x + 1
+
+def inc_num(num):
+    """Rewriting to pass rather than disable pylint"""
+    return num + 1
